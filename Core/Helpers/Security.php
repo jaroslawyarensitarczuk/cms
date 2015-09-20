@@ -3,9 +3,14 @@ namespace Core\Helpers;
 
 class Security
 {
-    public function saltPassword($password)
+    public function hash($dataToEncode)
     {
-        $hash = openssl_random_pseudo_bytes(40);
-        $password = hash('sha256', $password);
+        $encodedData = hash('sha256', $dataToEncode);
+        return $encodedData;
+    }
+
+    public function generateRandomString()
+    {
+        return openssl_random_pseudo_bytes(40);
     }
 }

@@ -3,8 +3,7 @@ namespace Core\Model
 
 class Model
 {
-    public $pdoDNS;
-    public $select;
+    private $pdoDNS;
 
     public function __construct()
     {

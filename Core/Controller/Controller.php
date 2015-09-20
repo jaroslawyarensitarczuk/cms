@@ -5,7 +5,7 @@ use Core\View;
 
 class Controller
 {
-    public function loadView()
+    protected function loadView()
     {
         return new View\View();
     }
