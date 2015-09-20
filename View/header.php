@@ -2,6 +2,6 @@
 
 <head>
     <meta charset="utf-8">
-    <title>...</title>
+    <title><?=$page_title;?></title>
 </head>
 <body>

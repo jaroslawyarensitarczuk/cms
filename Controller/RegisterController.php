@@ -7,10 +7,11 @@ class RegisterController extends Controller\Controller
 {
     public $view;
 
-    public static function indexAction()
+    public function indexAction()
     {
         $this->view = parent::loadView();
-        $this->view->load('header');
+        $data = ['page_title' => 'Rejestracja'];
+        $this->view->load('header', $data);
         $this->view->load('register');
         $this->view->load('footer');
     }

@@ -10,7 +10,8 @@ class DefaultController extends Controller\Controller
     public function indexAction()
     {
         $this->view = parent::loadView();
-        $this->view->load('header');
+        $data = ['page_title' => 'Domyślny kontroler'];
+        $this->view->load('header', $data);
         $this->view->load('welcome');
         $this->view->load('footer');
     }
