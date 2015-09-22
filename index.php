@@ -5,7 +5,8 @@ include 'Core/Autoloader/Autoloader.php';
 
 use Core\Routing;
 
-$routeParameters = array_diff(explode('/', $_SERVER['REQUEST_URI']), array(''));
+$requestUri =  trim(addslashes($_SERVER['REQUEST_URI']));
+$routeParameters = array_diff(explode('/', $requestUri), array(''));
 $router = new Routing\Router($routeParameters);
 
 if($router->loadControllerIfExist()) {
